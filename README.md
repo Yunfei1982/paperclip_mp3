@@ -1,29 +1,12 @@
 # PaperclipMp3
 
-TODO: Write a gem description
+Paperclip Mp3 is a Paperclip post-processor that convert to mp3 file of the audio attachment .
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'paperclip_mp3'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install paperclip_mp3
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    has_attached_file :sound,
+          styles: {
+                  mp3: {
+                          format: :mp3,
+                          :convert_options => {:ar => '44100', :ac => '2', :ab => '192000'},
+                          :processors => [:mp3]
+                  }
+          }

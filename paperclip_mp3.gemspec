@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = PaperclipMp3::VERSION
   spec.authors       = ["Yunfei"]
   spec.email         = ["yunfei.1982@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "Paperclip Mp3 is a Paperclip post-processor that convert to mp3 file of the audio attachment."
+  spec.summary       = "Paperclip post-processor that generates a mp3 from audio files."
+  spec.homepage      = "https://github.com/yunfei1982/paperclip_mp3"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "paperclip"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
