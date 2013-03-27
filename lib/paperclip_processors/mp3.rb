@@ -5,7 +5,7 @@ module Paperclip
 
             @basename = File.basename(file.path)
             @mp3_opts = {:ar => '44100', :ac => '2', :ab => '128000'}
-            @mp3_opts = options[:convert_options]
+            @mp3_opts = @mp3_opts.merge!(options[:convert_options])
         end
 
         def make
